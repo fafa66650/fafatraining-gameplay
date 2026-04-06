@@ -1,8 +1,11 @@
-FAFATRAINING MINDGAME V8 IMPACT
+MindGame V7 Pro Max
 
-Corrections :
-- QR maintenant cliquables avec vraie explication d’usage
-- titres de jeux beaucoup plus forts
-- univers pop culture beaucoup plus visibles
-- Mario / Pokémon / One Piece / Dragon Ball Z / K-pop / Manga mieux présents
-- interface plus claire
+Contenu :
+- 18 jeux
+- 162 scénarios (âge + difficulté)
+- 972 missions réelles
+- QR cliquables dans l’app
+- QR à scanner sur papier
+- chrono intégré
+- mode animateur avec réponses
+- GitHub Pages ready
