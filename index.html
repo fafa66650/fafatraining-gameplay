@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FAFATRAINING MindGame Arena</title>
+<meta name="theme-color" content="#0b0b12">
+<link rel="manifest" href="./manifest.json">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="app">
+  <header class="hero">
+    <div class="hero-main">
+      <div class="eyebrow">FAFATRAINING MINDGAME ARENA</div>
+      <h1>Plateforme animateur + joueurs pour jeux immersifs.</h1>
+      <p>Prépare la partie côté administrateur, génère les codes équipes, partage les liens joueurs, lance un chrono global de partie et utilise un vrai mode animateur avec toutes les réponses.</p>
+      <div class="hero-actions">
+        <button onclick="openTab('admin')">Administrateur</button>
+        <button class="ghost" onclick="openTab('player')">Joueurs</button>
+        <button class="ghost" onclick="openTab('guide')">Guide</button>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="stat"><strong id="countGames">0</strong><span>jeux</span></div>
+      <div class="stat"><strong id="countScenarios">0</strong><span>scénarios</span></div>
+      <div class="stat"><strong id="countMissions">0</strong><span>missions</span></div>
+      <div class="stat"><strong>Admin</strong><span>+ joueurs</span></div>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-target="admin" onclick="openTab('admin')">Administrateur</button>
+    <button class="tab" data-target="player" onclick="openTab('player')">Joueurs</button>
+    <button class="tab" data-target="library" onclick="openTab('library')">Bibliothèque</button>
+    <button class="tab" data-target="animateur" onclick="openTab('animateur')">Réponses animateur</button>
+    <button class="tab" data-target="guide" onclick="openTab('guide')">Guide</button>
+  </nav>
+
+  <section id="admin" class="panel tab-panel active">
+    <h2>Préparer une partie</h2>
+    <div class="grid-form">
+      <div><label>Nom de partie</label><input id="sessionName" type="text" value="Mission FAFATRAINING"></div>
+      <div><label>Jeu</label><select id="gameSelect"></select></div>
+      <div><label>Âge</label><select id="ageSelect"><option value="6-10">Enfants 6–10 ans</option><option value="11-17" selected>Ados 11–17 ans</option><option value="18+">Adultes 18+</option></select></div>
+      <div><label>Difficulté</label><select id="difficultySelect"><option value="facile">Facile</option><option value="moyen" selected>Moyen</option><option value="difficile">Difficile</option></select></div>
+      <div><label>Nombre d’équipes</label><select id="teamCount"></select></div>
+      <div><label>Durée totale de partie</label><select id="durationSelect"><option value="45">45 min</option><option value="60" selected>60 min</option><option value="75">75 min</option><option value="90">90 min</option></select></div>
+    </div>
+    <div class="actions">
+      <button onclick="prepareSession()">Préparer la partie</button>
+      <button class="ghost" onclick="renderAnimateur()">Actualiser réponses</button>
+    </div>
+    <div id="sessionSummary" class="notice">Prépare la partie pour générer le scénario, les liens joueurs et les QR de partage.</div>
+    <div id="scenarioPreview" class="grid"></div>
+    <div id="teamLinks" class="grid"></div>
+  </section>
+
+  <section id="player" class="panel tab-panel">
+    <div class="section-head">
+      <h2>Accès joueurs</h2>
+      <div class="actions">
+        <button class="ghost" onclick="backToLobby()">Retour au lobby</button>
+      </div>
+    </div>
+    <div id="playerLobby">
+      <div class="grid-form">
+        <div><label>Code équipe</label><input id="teamCodeInput" type="text" placeholder="ALPHA"></div>
+        <div><label>Scénario</label><select id="playerScenarioSelect"></select></div>
+        <div><label>Durée totale</label><select id="playerDurationSelect"><option value="45">45 min</option><option value="60" selected>60 min</option><option value="75">75 min</option><option value="90">90 min</option></select></div>
+      </div>
+      <div class="actions">
+        <button onclick="launchPlayerGame()">Commencer la partie</button>
+      </div>
+      <div class="notice">Le code équipe est donné par l’administrateur. Les joueurs n’ont pas besoin du mode animateur.</div>
+    </div>
+    <div id="playerGame" class="hidden">
+      <div class="pillbar">
+        <span class="pill" id="pillGame"></span>
+        <span class="pill" id="pillAge"></span>
+        <span class="pill" id="pillDiff"></span>
+        <span class="pill" id="pillTeam"></span>
+      </div>
+      <h2 id="playerGameTitle"></h2>
+      <p id="playerHook" class="meta"></p>
+      <div class="timer" id="globalTimer">00:60:00</div>
+      <div class="actions">
+        <button onclick="startGlobalTimer()">Lancer le chrono global</button>
+        <button class="ghost" onclick="prevMission()">Mission précédente</button>
+        <button class="ghost" onclick="nextMission()">Mission suivante</button>
+        <button class="ghost" onclick="backToLobby()">Quitter la partie</button>
+      </div>
+      <article class="mission-box">
+        <h3 id="missionTitle"></h3>
+        <p id="missionSummary"></p>
+        <p><strong>Consigne :</strong> <span id="missionInstruction"></span></p>
+        <p><strong>Type de validation :</strong> <span id="missionType"></span></p>
+        <div class="grid">
+          <article class="card">
+            <h3>Valider la mission</h3>
+            <input id="answerInput" type="text" placeholder="Saisir la réponse ou le code">
+            <div class="actions">
+              <button onclick="validateCurrentMission()">Valider</button>
+            </div>
+            <div id="validationResult" class="notice">Entre la réponse si la mission demande un code ou un mot. Pour les défis photo / validation, l’animateur tranche.</div>
+          </article>
+          <article class="card">
+            <h3>QR mission</h3>
+            <p>Ce QR est optionnel : il sert uniquement si tu veux passer par un scan papier pour ouvrir exactement cette mission.</p>
+            <img class="qr-img" id="missionQr" alt="QR mission">
+          </article>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="library" class="panel tab-panel">
+    <div class="section-head">
+      <h2>Bibliothèque des jeux</h2>
+      <div class="filters">
+        <input id="searchInput" type="text" placeholder="Rechercher un jeu, un univers, une mission..." oninput="renderLibrary()">
+      </div>
+    </div>
+    <div id="libraryGrid" class="grid"></div>
+  </section>
+
+  <section id="animateur" class="panel tab-panel">
+    <h2>Réponses animateur</h2>
+    <div class="notice">Ici, tu retrouves le détail des missions, les réponses attendues, les indices et les liens d’ouverture. C’est ton tableau de bord.</div>
+    <div id="animateurGrid" class="grid"></div>
+  </section>
+
+  <section id="guide" class="panel tab-panel">
+    <h2>Guide d’utilisation</h2>
+    <div class="grid">
+      <article class="card"><h3>1. Administrateur</h3><p>Prépare la partie, choisis le jeu, l’âge, la difficulté, le nombre d’équipes et la durée totale. Puis partage les liens générés.</p></article>
+      <article class="card"><h3>2. Joueurs</h3><p>Chaque équipe ouvre son lien ou renseigne son code équipe. Un chrono global démarre pour toute la partie.</p></article>
+      <article class="card"><h3>3. Missions</h3><p>Les missions s’enchaînent avec des boutons précédent / suivant. Les QR sont facultatifs, plus la seule façon de jouer.</p></article>
+      <article class="card"><h3>4. Réponses</h3><p>L’animateur a toutes les réponses et peut trancher les validations photo, bluff ou défis sociaux.</p></article>
+    </div>
+  </section>
+</div>
+<script src="./app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(() => {}));
+}
+</script>
+</body>
+</html>
