@@ -1,0 +1,112 @@
+{
+  "zombie": {
+    "title": "Pack Zone Infectée",
+    "teaser": "survie, contamination, panique contrôlée",
+    "starter": "créer une ambiance alerte, zones interdites et mission de survie",
+    "objects": [
+      "fioles",
+      "cartes alerte",
+      "codes contamination",
+      "bracelets verts"
+    ]
+  },
+  "gaming": {
+    "title": "Pack World XP",
+    "teaser": "niveaux, boss, loot, power-ups",
+    "starter": "installer une logique de niveaux avec boss final",
+    "objects": [
+      "cartes XP",
+      "jetons loot",
+      "portails",
+      "codes boss"
+    ]
+  },
+  "enquete": {
+    "title": "Pack Dossier X",
+    "teaser": "mystère, témoins, coupable",
+    "starter": "démarrer avec un briefing enquête très court puis laisser monter le doute",
+    "objects": [
+      "fiches indices",
+      "photos",
+      "faux rapports",
+      "codes de salle"
+    ]
+  },
+  "aventure": {
+    "title": "Pack Île Chaos",
+    "teaser": "exploration, tribus, défis",
+    "starter": "créer des camps et un totem final",
+    "objects": [
+      "fragments de carte",
+      "totem",
+      "cordes",
+      "jetons survie"
+    ]
+  },
+  "braquage": {
+    "title": "Pack Opération Zéro",
+    "teaser": "coffre, chrono, infiltration",
+    "starter": "annoncer un temps limite et plusieurs couches de sécurité",
+    "objects": [
+      "combinaisons de coffre",
+      "plans",
+      "badges",
+      "codes d’accès"
+    ]
+  },
+  "labo": {
+    "title": "Pack Laboratoire 404",
+    "teaser": "science folle, codes, anomalies",
+    "starter": "installer un protocole d’urgence et des expériences ratées",
+    "objects": [
+      "éprouvettes",
+      "messages cryptés",
+      "badges labo",
+      "codes alpha"
+    ]
+  },
+  "fantasy": {
+    "title": "Pack Cristal des Royaumes",
+    "teaser": "artefacts, clans, magie",
+    "starter": "répartir les équipes en maisons ou guildes",
+    "objects": [
+      "cristaux",
+      "glyphes",
+      "grimoire",
+      "totems"
+    ]
+  },
+  "manga": {
+    "title": "Pack Nexus Manga",
+    "teaser": "rivalité, montée en puissance, duel final",
+    "starter": "utiliser des cartes pouvoirs et une logique d’évolution",
+    "objects": [
+      "cartes aura",
+      "jetons énergie",
+      "sceaux",
+      "orbes"
+    ]
+  },
+  "stream": {
+    "title": "Pack Creator Clash",
+    "teaser": "buzz, défis viraux, missions live",
+    "starter": "lancer des défis rapides et événements surprises",
+    "objects": [
+      "cartes buzz",
+      "défis flash",
+      "compteurs live",
+      "badges créateur"
+    ]
+  },
+  "urban": {
+    "title": "Pack City Pulse",
+    "teaser": "crew, ville, mission, poursuite",
+    "starter": "penser zones urbaines et captures d’indices",
+    "objects": [
+      "tags",
+      "plans de quartier",
+      "badges crew",
+      "codes de quartier"
+    ]
+  }
+}
