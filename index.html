@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>FAFATRAINING MindGame V15 Pro Real</title>
+<title>FAFATRAINING MindGame Arena</title>
 <meta name="theme-color" content="#0b1017">
 <link rel="manifest" href="./manifest.json">
 <link rel="stylesheet" href="./style.css">
@@ -12,8 +12,8 @@
 <div class="app">
   <header class="hero">
     <div class="hero-main">
-      <div class="eyebrow">FAFATRAINING MINDGAME V15 PRO REAL</div>
-      <h1>L’arène immersive des jeux différenciés, scénarisés et prêts terrain.</h1>
+      <div class="eyebrow">FAFATRAINING MINDGAME ARENA</div>
+      <h1>L’arène immersive des jeux d’enquête, de traîtrise, d’escape, de quiz et de défis.</h1>
       <p>Chaque univers a son identité, ses missions, sa tension et sa façon de jouer. Toi, tu pilotes. Les équipes, elles, plongent dans l’expérience.</p>
       <div class="hero-actions">
         <button onclick="openTab('admin')">Console animateur</button>
@@ -46,9 +46,9 @@
         <button class="ghost" onclick="exportSession()">Exporter la session</button>
       </div>
     </div>
-    <div class="notice">Prépare une vraie session : choisis le jeu, l’âge, la difficulté, le nombre d’équipes, la durée. Tu peux ensuite partager un QR ou un lien par équipe. Chaque équipe peut aussi renseigner son nom et les noms de ses joueurs.</div>
+    <div class="notice">Prépare une vraie session : choisis le jeu, l’âge, la difficulté, le nombre d’équipes et la durée. Le nom de session sert à identifier ton événement, ton groupe ou ta structure quand tu exportes ou retrouves la session.</div>
     <div class="grid-form">
-      <div><label>Nom de session</label><input id="sessionName" type="text" value="Session FAFATRAINING"></div>
+      <div><label>Nom de session / événement</label><input id="sessionName" type="text" value="Session FAFATRAINING"></div>
       <div><label>Jeu</label><select id="gameSelect"></select></div>
       <div><label>Âge</label><select id="ageSelect"></select></div>
       <div><label>Difficulté</label><select id="difficultySelect"></select></div>
@@ -75,7 +75,7 @@
       </div>
     </div>
     <div id="playerLobby">
-      <div class="notice">Les joueurs accèdent à leur partie avec leur lien direct ou en entrant le code équipe. Ils peuvent nommer leur équipe, inscrire les joueurs et démarrer la session sans toucher au mode animateur.</div>
+      <div class="notice">Les joueurs accèdent à leur partie avec leur lien direct ou leur code équipe. Si une session administrateur est active sur l’appareil, le scénario, la durée et les équipes se remplissent automatiquement ici.</div><div id="playerTeamsNotice" class="notice"></div>
       <div class="grid-form">
         <div><label>Code équipe</label><input id="teamCodeInput" type="text" placeholder="ALPHA"></div>
         <div><label>Scénario</label><select id="playerScenarioSelect"></select></div>
@@ -85,7 +85,7 @@
       </div>
       <div class="actions">
         <button onclick="launchPlayerGame()">Commencer la partie</button>
-      </div>
+      </div><div id="playerTeamsGrid" class="grid"></div>
     </div>
 
     <div id="playerGame" class="hidden">

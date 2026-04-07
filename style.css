@@ -72,3 +72,13 @@ input,select{width:100%;padding:12px 14px;border-radius:14px;border:1px solid #3
   .hero,.grid-form{grid-template-columns:1fr}
   .hero h1{font-size:34px}
 }
+
+#pillAge:empty{display:none}
+#missionPayload .pill{background:#ffffff12;color:#fff}
+
+#pillDiff:empty{display:none}
+#playerTeamsGrid .card{border-color:rgba(84,255,155,.22)}
+.hero-main h1{background:linear-gradient(90deg,#fff,#baf8d3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.notice{background:linear-gradient(145deg,#121927,#1a2230)}
+.mission-box{border-color:#3a4662}
+.card h3,.mission-box h3{color:#f9fbff}
