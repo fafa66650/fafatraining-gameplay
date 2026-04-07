@@ -1,4 +1,4 @@
-FAFATRAINING MindGame V15 Pro Real
+FAFATRAINING MindGame 
 
 Contenu :
 - 18 jeux différenciés
