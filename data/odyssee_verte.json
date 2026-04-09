@@ -1,0 +1,74 @@
+[
+  {
+    "kind": "navigation",
+    "title": "Le sentier des bornes",
+    "scene": "Quatre bornes anciennes jalonnent un sentier. Trois indiquent une progression cohérente, une seule vous envoie vers un piège végétal.",
+    "prompt": "Quelle borne paraît fausse ?",
+    "options": [
+      "A · Nord-Est / rivière / 2 arches",
+      "B · Est / clairière / 3 pierres",
+      "C · Sud / sommet / 1 cascade",
+      "D · Est / clairière / 3 pierres"
+    ],
+    "answer": "C",
+    "explanation": "Le sommet ne peut pas être indiqué au Sud si toute la série tire l’équipe vers l’Est et le Nord-Est. Ce défi récompense la cohérence spatiale.",
+    "free_clue": "Indice discret : trois indications semblent appartenir au même axe de progression.",
+    "help1": "Cherche l’indication qui casse la direction globale.",
+    "help2": "La réponse fausse est celle qui pointe au Sud.",
+    "bonus": "Instinct de pisteur : +35 points si vous réussissez du premier coup."
+  },
+  {
+    "kind": "pattern",
+    "title": "Les dalles de mousse",
+    "scene": "Un couloir de pierre montre quatre dalles. La bonne sortie suit une alternance très simple, mais il faut la voir vite.",
+    "prompt": "Quelle dalle vient logiquement après : feuille / soleil / feuille / soleil / ... ?",
+    "options": [
+      "A · feuille",
+      "B · soleil",
+      "C · lune",
+      "D · pierre"
+    ],
+    "answer": "A",
+    "explanation": "La série alterne feuille puis soleil. La prochaine dalle doit donc être une feuille. Cette manche est simple en apparence, mais pensée pour mettre l’équipe dans le rythme.",
+    "free_clue": "Indice discret : ne cherche pas compliqué si la série est régulière.",
+    "help1": "Observe seulement l’alternance des deux premiers symboles.",
+    "help2": "La bonne réponse est feuille.",
+    "bonus": "Mise en route parfaite : +20 points."
+  },
+  {
+    "kind": "code",
+    "title": "Le pont verrouillé",
+    "scene": "Un pont ancien s’ouvre avec un mot-code. Un message gravé dit : « Je suis toujours après 4 et avant 6. »",
+    "prompt": "Quel chiffre faut-il entrer ?",
+    "options": [
+      "A · 3",
+      "B · 4",
+      "C · 5",
+      "D · 6"
+    ],
+    "answer": "C",
+    "explanation": "Le chiffre qui se trouve après 4 et avant 6 est 5. Ici, on garde une énigme ultra accessible, mais intégrée à la progression de l’aventure.",
+    "free_clue": "Indice discret : lis la gravure exactement comme elle est écrite.",
+    "help1": "Tu cherches ce qui se place entre 4 et 6.",
+    "help2": "Le pont attend le chiffre 5.",
+    "bonus": "Passage fluide : +25 points."
+  },
+  {
+    "kind": "choice",
+    "title": "Le coffre de sève",
+    "scene": "Vous trouvez un coffre vivant nourri par des racines. Vous pouvez soit le forcer, soit l’observer, soit contourner, soit le laisser.",
+    "prompt": "Quel choix donne le plus de chances de récupérer un bonus sans tomber dans un piège ?",
+    "options": [
+      "A · Le frapper immédiatement",
+      "B · L’observer pour repérer son rythme",
+      "C · L’abandonner sans regarder",
+      "D · Couper toutes les racines"
+    ],
+    "answer": "B",
+    "explanation": "Dans Odyssée Verte, l’observation précède l’action. Observer le rythme du coffre permet d’ouvrir au bon moment et d’éviter le piège de force brute.",
+    "free_clue": "Indice discret : dans cet univers, la nature réagit mieux à la lecture qu’à la violence.",
+    "help1": "Le bon choix commence par comprendre le mécanisme vivant.",
+    "help2": "Il faut observer avant d’agir.",
+    "bonus": "Lecture précise : +40 points."
+  }
+]

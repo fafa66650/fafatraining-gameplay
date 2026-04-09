@@ -1,0 +1,75 @@
+[
+  {
+    "kind": "logic",
+    "title": "Le témoin trop parfait",
+    "scene": "Trois silhouettes décrivent la même scène sous la pluie. L’une semble trop sûre d’elle pour être fiable.",
+    "prompt": "Quel témoignage est le plus dangereux à suivre ?",
+    "options": [
+      "A · « J’ai tout vu, faites-moi confiance sans poser de question. »",
+      "B · « J’ai aperçu une ombre glisser derrière la fontaine. »",
+      "C · « J’ai entendu deux voix, puis un silence brutal. »",
+      "D · « Je ne suis pas sûr, je veux comparer avant d’accuser. »"
+    ],
+    "answer": "A",
+    "explanation": "Le témoignage A exige qu’on le croie sans donner le moindre détail vérifiable. Dans ce mode, le vrai danger vient des certitudes creuses.",
+    "free_clue": "Indice discret : les bons témoins donnent toujours au moins un détail concret.",
+    "help1": "Cherche la phrase la plus autoritaire et la moins vérifiable.",
+    "help2": "La bonne piste est celle qui réclame la confiance sans rien prouver.",
+    "bonus": "Bouclier de Nuit : si vous réussissez sans Carte Bonus, vous gagnez +40 points."
+  },
+  {
+    "kind": "observation",
+    "title": "Le marquage brisé",
+    "scene": "Une plaque humide retrouvée près du puits montre une série de symboles. L’un casse complètement la logique du reste.",
+    "prompt": "Quel symbole ne suit pas la série ?",
+    "visual": "◐   ◓   ◑   ▲",
+    "options": [
+      "A · ◐",
+      "B · ◓",
+      "C · ◑",
+      "D · ▲"
+    ],
+    "answer": "D",
+    "explanation": "Les trois premiers signes sont des variantes d’un même cercle fragmenté. Le triangle est l’intrus. Ici, on récompense l’œil, pas la culture.",
+    "free_clue": "Indice discret : trois formes appartiennent à la même famille visuelle.",
+    "help1": "Cherche l’élément qui n’est pas construit sur une base circulaire.",
+    "help2": "Le triangle est l’intrus.",
+    "bonus": "Réflexe de veille : si vous validez en moins de 20 secondes, +50 points."
+  },
+  {
+    "kind": "deduction",
+    "title": "Le cadenas du caveau",
+    "scene": "Un cadenas garde l’accès à un passage secondaire. Trois plaques donnent des indices : la somme des trois chiffres vaut 12 ; le 1er chiffre est plus grand que le 2e ; le 3e est le double du 2e.",
+    "prompt": "Quelle combinaison colle le mieux ?",
+    "options": [
+      "A · 5 - 2 - 4",
+      "B · 6 - 3 - 3",
+      "C · 4 - 2 - 6",
+      "D · 7 - 1 - 4"
+    ],
+    "answer": "C",
+    "explanation": "4-2-6 respecte tous les indices : somme 12, premier chiffre > deuxième, troisième = double du deuxième. Ce défi récompense la relecture méthodique.",
+    "free_clue": "Indice discret : commence par le lien entre le 2e et le 3e chiffre.",
+    "help1": "Si le 2e chiffre vaut 2, le 3e doit valoir 6.",
+    "help2": "La bonne combinaison est 4 - 2 - 6.",
+    "bonus": "Retour de situation : même après une première erreur, une bonne relecture vous rend +20 points."
+  },
+  {
+    "kind": "strategy",
+    "title": "La rumeur empoisonnée",
+    "scene": "Une rumeur se propage : une autre équipe serait déjà en train de vous dépasser. Vous devez choisir la réaction la plus intelligente.",
+    "prompt": "Quelle stratégie est la plus solide ?",
+    "options": [
+      "A · Révéler tout votre plan pour faire peur",
+      "B · Garder vos infos clés et accélérer proprement",
+      "C · Changer tout votre système dans la panique",
+      "D · Accuser une équipe au hasard"
+    ],
+    "answer": "B",
+    "explanation": "La meilleure équipe ne panique pas : elle protège ses infos fortes et accélère de manière contrôlée. C’est ainsi qu’on traverse les retournements.",
+    "free_clue": "Indice discret : sous pression, la panique est presque toujours un piège.",
+    "help1": "La bonne réponse garde votre équipe vivante ET efficace.",
+    "help2": "Il faut protéger vos infos et accélérer sans vous exposer.",
+    "bonus": "Mouvement propre : +30 points et aucune pénalité mentale."
+  }
+]
