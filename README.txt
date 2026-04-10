@@ -1,17 +1,14 @@
-FAFATRAINING GOD MODE V4
+FAFATRAINING Game Arena
 
-Base utilisée :
-- FAFATRAINING GOD MODE V2
+Base conservée :
+- version actuelle testée par l'utilisateur
 
-Priorité appliquée :
-- 3 = immersion cinématique
-
-Ajouts V4 :
-- intro noire et progressive
-- glitch texte
-- pluie visuelle conservée
-- ambiance sonore synthétique plus présente
-- feedback bonne/mauvaise réponse renforcé
-- chrono plus intégré et plus visible
-- fin plus spectaculaire
-- toujours sur la même base, sans repartir sur un autre projet
+Améliorations :
+- admin multi-équipes
+- concordance joueurs / équipes / joueurs par équipe
+- saisie des noms d'équipe et des joueurs
+- nombre d'épreuves automatique
+- suivi admin du jeu et des scores
+- règles plus visibles
+- proposition d'utiliser les cartes aide avant la réponse
+- fin de partie plus forte
