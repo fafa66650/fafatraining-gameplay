@@ -143,3 +143,6 @@ code{display:block;background:#0d1420;padding:10px;border-radius:12px;word-break
   .wow-title{font-size:40px}
   .visual{max-width:100%}
 }
+
+.hero-logo{width:260px!important;height:260px!important;border:none!important;background:transparent!important;}
+.visual img{max-height:180px!important;}
