@@ -1,0 +1,9 @@
+{
+  "name": "FAFATRAINING Game Arena",
+  "short_name": "Game Arena",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#071224",
+  "theme_color": "#24ff6d",
+  "icons": [{"src":"assets/logo.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]
+}
